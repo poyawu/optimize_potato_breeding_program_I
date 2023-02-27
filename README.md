@@ -6,12 +6,12 @@ Note that this manuscript is currently under revision, so changes are expected.
 
 If you find any issues or errors, please do not hesitate to contact us:
 * Po-Ya Wu (maintainer)
-  ** E-mail: Po-Ya.Wu@hhu.de
-  ** Institute for Quantitative Genetics and Genomics of Plants, Heinrich Heine University Duesseldorf 
+  - E-mail: Po-Ya.Wu@hhu.de
+  - Institute for Quantitative Genetics and Genomics of Plants, Heinrich Heine University Duesseldorf 
   
 * Delphine Van Inghelandt 
-  ** E-mail: inghelan@hhu.de
-  ** Institute for Quantitative Genetics and Genomics of Plants, Heinrich Heine University Duesseldorf 
+  - E-mail: inghelan@hhu.de
+  - Institute for Quantitative Genetics and Genomics of Plants, Heinrich Heine University Duesseldorf 
   
 ## Data description:
 * 100clones_haplotype.RData: 
