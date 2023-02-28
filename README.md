@@ -16,7 +16,7 @@ If you find any issues or errors, please do not hesitate to contact us:
 ## Data description:
 * **100clones_haplotype.RData**: 
 
- The haplotype information of 100 tetraploid potato clones used as parents in this study is stored in a list called `haplotype.all` with a length of 12 (= basic chromosome number of potato). Note that the haplotype phase was randomly determined. For each chromosome, the haplotype information of clones and their four haplotypes are expressed in a matrix with $400 \times p$, where $p$ is the number of markers at such chromosome. In detail, Clone 1 at haplotype 1, 2, 3, and 4 are called $1_1$, $1_2$ $1_3$, and $1_4$ in the row names.
+ The haplotype information of 100 tetraploid potato clones used as parents in this study is stored in a list called `haplotype.all` with a length of 12 (= basic chromosome number of potato). Note that the haplotype phase was randomly determined. For each chromosome, the haplotype information of clones and their four haplotypes are expressed in a matrix with $400 \times p$, where $p$ is the number of markers at such chromosome. In detail, Clone 1 at the haplotype 1, 2, 3, and 4 are called 1$_$1, 1$_$2 1$_$3, and 1$_$4 in the row names.
 
 * **geneticmap_centromere.RData**:
 
