@@ -3,11 +3,12 @@ rm(list =ls()); gc()
 ## load required functions 
 source("../script/main_function.R")
 
+######################################################################################################
 ######### Parameter settings in the simulation study: considering a specific scenario ################
 
-T1.cost <- 1.4 ## phenotypic cost for Ta: auxiliary trait
-T2.cost <- 25 ## phenotypic cost for Tt: target trait
-geno.cost <- 25 ## genotypic cost 
+T1.cost <- 1.4 ## phenotyping cost for Ta: auxiliary trait
+T2.cost <- 25 ## phenotyping cost for Tt: target trait
+geno.cost <- 25 ## genotyping cost 
 
 GS.stage <- "GS-SL" ## selection strategy (could be PS, GS-SL, GS-SH, GS-A, GS-SL:SH, GS-SH:A, and GS-SL:SH:A)
 
@@ -37,6 +38,8 @@ C.to.D <- 0.2 ## p5: selected proportion from C clone to D clone
 
 
 n.seedling.PS <- 300000  ## number of progenies at seedling stage in a standard PS 
+######################################################################################################
+######################################################################################################
 
 
 ## obtain the scenario information under a fixed budget
