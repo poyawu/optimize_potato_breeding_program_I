@@ -43,13 +43,13 @@ n.seedling.PS <- 300000  ## number of progenies at seedling stage in a standard 
 
 
 ## obtain the scenario information under a fixed budget
-scenario.list <- produce.scenario.fun(T1.cost = T1.cost, T2.cost = T2.cost, 
-                                      geno.cost = geno.cost, GS.stage = GS.stage,
-                                      l1 = l1, l2 = l2, l3 = l3, l4 = l4, l5 = l5, l6 = l6,
-                                      alpha.1 = alpha.1, alpha.2 = alpha.2, alpha.3 = alpha.3,
-                                      n.seedling.PS = n.seedling.PS,
-                                      SL.to.SH = SL.to.SH, SH.to.A = SH.to.A, 
-                                      A.to.B = A.to.B, B.to.C = B.to.C, C.to.D = C.to.D)
+scenario.list <- scenario.fixed.selpro.fun(T1.cost = T1.cost, T2.cost = T2.cost, 
+                                           geno.cost = geno.cost, GS.stage = GS.stage,
+                                           l1 = l1, l2 = l2, l3 = l3, l4 = l4, l5 = l5, l6 = l6,
+                                           alpha.1 = alpha.1, alpha.2 = alpha.2, alpha.3 = alpha.3,
+                                           n.seedling.PS = n.seedling.PS,
+                                           SL.to.SH = SL.to.SH, SH.to.A = SH.to.A, 
+                                           A.to.B = A.to.B, B.to.C = B.to.C, C.to.D = C.to.D)
 
 ## obtain the exact information at each stage under a fixed budget by adjusting the number of clones at each stage
 if(GS.stage == "PS"){

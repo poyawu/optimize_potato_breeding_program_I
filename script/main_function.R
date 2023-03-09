@@ -1,5 +1,5 @@
 ####### determine the position for each QTL ##########
-QTL.position.function <- function(nQTL, genMap, effect.a, effect.d){
+QTL.position.fun <- function(nQTL, genMap, effect.a, effect.d){
   
   if(length(effect.a) != length(effect.d)){
     stop("Please check the additive and dominance effects. Their numbers are different.")
@@ -18,7 +18,7 @@ QTL.position.function <- function(nQTL, genMap, effect.a, effect.d){
       select.num.QTL.chr[which.min(select.num.QTL.chr)] <- min(select.num.QTL.chr)+1
     }
   }
-  ## randamly determine which positions are QTL based on genetic map 
+  ## randomly determine which positions are QTL based on genetic map 
   pos <- sapply(1:length(genMap), function(i){
     map.round <- round(genMap[[i]], 3)
     freq <- as.data.frame(table(round(genMap[[i]], 3)), stringsAsFactors = F)
@@ -57,21 +57,21 @@ QTL.position.function <- function(nQTL, genMap, effect.a, effect.d){
 ############### produce the information (# of clones, # of rep, # of loc...) for the specific scenario ##############
 #####################################################################################################################
 #### strategies (GS.stage): 
-# "none": only PS
-# "seedling": apply in seedling
-# "SH": apply in SH
-# "A": apply in A
-# "seedling.SH.A": apply in seedling, SH, and A using the same EGV (same scenario as "seedling")
-# "seedling.SH": apply in seedling, SH, and A using the same EGV (same scenario as "seedling")
-# "SH.A": apply in SH, and A using the same GEBV (same scenario as "SH")
-
-produce.scenario.fun <- function(T1.cost, T2.cost, geno.cost,
-                                 GS.stage, 
-                                 n.seedling.PS = 300000,
-                                 l1, l2, l3, l4, l5, l6, 
-                                 alpha.1 = alpha.1, alpha.2 = alpha.2, alpha.3 = alpha.3, 
-                                 SL.to.SH = SL.to.SH, SH.to.A = SH.to.A, 
-                                 A.to.B = A.to.B, B.to.C = B.to.C, C.to.D = C.to.D){
+# "PS": only PS
+# "GS-SL": apply GS in seedling stage
+# "GS-SH": apply GS in single hill stage
+# "GS-A": apply GS in A clone stage
+# "GS-SL:SH:A": apply GS in seedling, single hills, and A clone stages using the same EGV (same scenario as "GS-SL")
+# "GS-SL:SH": apply GS in seedling, and single hills stages using the same EGV (same scenario as "GS-SL")
+# "GS-SH:A": apply GS in single hills, and A clone stages using the same EGV (same scenario as "GS-SH")
+## The total budget is fixed based on a standard breeding program
+scenario.fixed.selpro.fun <- function(T1.cost, T2.cost, geno.cost,
+                                      GS.stage, 
+                                      n.seedling.PS = 300000,
+                                      l1, l2, l3, l4, l5, l6, 
+                                      alpha.1 = alpha.1, alpha.2 = alpha.2, alpha.3 = alpha.3, 
+                                      SL.to.SH = SL.to.SH, SH.to.A = SH.to.A, 
+                                      A.to.B = A.to.B, B.to.C = B.to.C, C.to.D = C.to.D){
   
   ## set parameters for PS
   SL.to.SH.PS <- 1/3
@@ -193,13 +193,13 @@ produce.scenario.fun <- function(T1.cost, T2.cost, geno.cost,
 
 ##################################################################################
 ###### evaluate the performance for the specific scenario
-evaluate.scenario.grid.function <- function(T1.cost = T1.cost, T2.cost = T2.cost, geno.cost = geno.cost, 
-                                            F1.infor = F1.infor, GS.stage, 
-                                            scenario, alpha.1, alpha.2, alpha.3,
-                                            select = select,
-                                            h2.T1 = h2.T1, ratio.var.T2 = c("vg"=1,"vge"=1,"ve"=0.5), 
-                                            cor.T1.T2 = cor.T1.T2, 
-                                            pa = pa, r, T2.type = T2.type, print = T){
+evaluate.scenario.grid.fun <- function(T1.cost = T1.cost, T2.cost = T2.cost, geno.cost = geno.cost, 
+                                       F1.infor = F1.infor, GS.stage, 
+                                       scenario, alpha.1, alpha.2, alpha.3,
+                                       select = select,
+                                       h2.T1 = h2.T1, ratio.var.T2 = c("vg"=1,"vge"=1,"ve"=0.5), 
+                                       cor.T1.T2 = cor.T1.T2, 
+                                       pa = pa, r, T2.type = T2.type, print = T){
   
   library(tibble)
   library(dplyr)

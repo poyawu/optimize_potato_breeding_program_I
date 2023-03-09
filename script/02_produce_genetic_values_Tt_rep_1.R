@@ -30,7 +30,7 @@ n.seedling <- 300*3000
 crossplan <- crossplan.list[[r]]
 
 ## randomly determine 2000 QTL position
-QTL.effect <- QTL.position.function(genMap = genetic.map, effect.a = effect.a, effect.d = effect.d)
+QTL.effect <- QTL.position.fun(genMap = genetic.map, effect.a = effect.a, effect.d = effect.d)
 #### In the "QTL effect" ####
 ## 1st column: chromosome
 ## 2nd column: the location within a chromosome 
