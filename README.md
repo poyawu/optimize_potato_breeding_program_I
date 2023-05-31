@@ -1,6 +1,6 @@
 # Optimize potato breeding program I
 
-This repository contains the main R scripts and empirical genotypic data that were used as a basis for the computer simulation study of "Optimal implementation of genomic selection in clone breeding programs - exemplified in potato: I. Effect of selection strategy, implementation stage, and selection intensity on short-term genetic gain" (Wu et al., 2023). These scripts were performed under R 3.6.1 and AlphaSimR 1.0.4.
+This repository contains the main R scripts and empirical genotypic data that were used as a basis for the computer simulation study of "Optimal implementation of genomic selection in clone breeding programs - Exemplified in potato: I. Effect of selection strategy, implementation stage, and selection intensity on short-term genetic gain" (Wu et al., 2023). These scripts were performed under R 3.6.1 and AlphaSimR 1.0.4.
 
 Note that this manuscript is currently under revision, and therefore changes are expected.
 
@@ -29,4 +29,4 @@ If you find any issue or error, please do not hesitate to contact us:
 The other datasets were produced by performing the scripts subsequently.
 
 ## Citation
-* Wu, P.-Y., Stich, B., Renner, J., Muders, K., Prigge, V., and van Inghelandt, D. (2023). Optimal implementation of genomic selection in clone breeding programs - exemplified in potato: I. Effect of selection strategy, implementation stage, and selection intensity on short-term genetic gain. Under revision.
+* Wu, P.-Y., Stich, B., Renner, J., Muders, R., Prigge, V., & van Inghelandt, D. (2023). Optimal implementation of genomic selection in clone breeding programs—Exemplified in potato: I. Effect of selection strategy, implementation stage, and selection intensity on short-term genetic gain. The Plant Genome, 00, e20327. https://doi.org/10.1002/tpg2.20327
